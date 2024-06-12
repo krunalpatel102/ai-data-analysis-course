@@ -3,19 +3,19 @@ I am interested in getting started in data analysis. I will tell you a little bi
 Here's more information about me.
 
 <domain-context>
-***
+I am a primary school teacher.
 </domain-context>
 
 <interest>
-***
+Student engagement during different times of the day.
 </interest>
 
 <learning-insight>
-***
+I found the concept of time series analysis extremely beneficial. I plan to apply it to forecast student engagement trends to optimize class schedules.
 </learning-insight>
 
 <challenge-reflection>
-***
+I struggled with understanding statistical hypothesis testing. I overcame this by revisiting foundational statistics resources and practicing with real-world examples. The peer discussion forums and supplemental videos were particularly helpful.
 </challenge-reflection>
 
 Given my domain context, my interest, and the insights and challenges I encountered, please provide a comprehensive plan for my first independent data analysis project. The plan should include:

@@ -2,12 +2,28 @@ I am interested in getting started in data analysis. I will tell you a little bi
 
 Here's more information about me.
 
-I come from the field: I am a primary school teacher.
+<domain-context>
+I am a primary school teacher.
+</domain-context>
 
-I want to measure: Student engagement during different times of the day.
+<interest>
+Student engagement during different times of the day.
+</interest>
 
-My primary interest is in the data analysis method: As a data analyst, I found the concept of time series analysis extremely beneficial. I plan to apply it to forecast sales trends for our quarterly business reports, helping our team make informed inventory decisions.
+<learning-insight>
+I found the concept of time series analysis extremely beneficial. I plan to apply it to forecast student engagement trends to optimize class schedules.
+</learning-insight>
 
-A data analysis method I find tough and want to learn more about: Given my background in marketing, I struggled with understanding statistical hypothesis testing. I overcame this by revisiting foundational statistics resources and practicing with real-world examples. The peer discussion forums and supplemental videos were particularly helpful.
+<challenge-reflection>
+statistical hypothesis testing
+</challenge-reflection>
 
-Given my domain context and my interest, please suggest 3 interesting questions that I could do a data analysis project on and 3 possible sources of data that I could use. Preferably suggest datasets that are publicly available and free online with links. Otherwise, suggest how I might approach data collection.
+Given my domain context, my interest, and the insights and challenges I encountered, please provide a comprehensive plan for my first independent data analysis project. The plan should include:
+
+1. A brief overview of the types of research that are valued in my field, specifically focusing on measurements related to my interests.
+2. Three interesting and specific research questions I could explore through data analysis in my field.
+3. Three possible sources of data that I could use for this project, preferably datasets that are publicly available and free online with links, or suggestions on how I might approach data collection within my school.
+4. Three personalized next steps I should take to continue improving my data analysis skills, including recommended resources or courses to deepen my understanding of time series analysis and other relevant techniques.
+
+Additionally, please suggest how I might present my findings to my colleagues in my field in a way that highlights the practical benefits and insights gained from my analysis.
+
