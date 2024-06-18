@@ -1,0 +1,6 @@
+# Install JupyterLab and MyST-NB
+RUN pip install jupyterlab
+RUN pip install jupyterlab_myst
+
+# Set the command to start JupyterLab
+CMD ["start.sh", "jupyter", "lab"]
