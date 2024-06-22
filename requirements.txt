@@ -1,9 +1,10 @@
-matplotlib.pyplot
+jupyterlab
+jupyterlab_myst
+matplotlib
 numpy
-os
 pandas
 pathlib
 scipy
-scipy.stats
 seaborn
 textblob
+stdlib-list

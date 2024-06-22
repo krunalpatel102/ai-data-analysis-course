@@ -1,6 +1,9 @@
-# Install JupyterLab and MyST-NB
+# Install packages
 RUN pip install jupyterlab
 RUN pip install jupyterlab_myst
+RUN pip install textblob
+RUN pip install seaborn
+RUN pip install pathlib
 
 # Set the command to start JupyterLab
 CMD ["start.sh", "jupyter", "lab"]

@@ -1,29 +1,25 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3-slim
+# Use an official lightweight Python image.
+FROM python:3.9-slim
 
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE=1
+# Set environment variables to make Python behave in a Docker container
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED=1
+# Set the working directory in the container
+WORKDIR /app
 
-# Install pip requirements
-COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+# Install Python dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install JupyterLab and MyST-NB
+# Install JupyterLab and any optional extensions like MyST-NB
 RUN pip install jupyterlab jupyterlab_myst
 
-WORKDIR /app
+# Copy the rest of your application's code
 COPY . /app
 
-# Creates a non-root user with an explicit UID and adds permission to access the /app folder
-# For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
-RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
-USER appuser
-
-# Expose port 8888 for JupyterLab
+# Expose port 8888 to access Jupyter
 EXPOSE 8888
 
-# Set the command to start JupyterLab
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
+# Run JupyterLab
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--NotebookApp.token=''", "--allow-root"]
