@@ -1,0 +1,9 @@
+matplotlib.pyplot
+numpy
+os
+pandas
+pathlib
+scipy
+scipy.stats
+seaborn
+textblob
