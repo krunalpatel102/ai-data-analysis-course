@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 import importlib
 import pkgutil
+import pandas as pd
 
 def find_project_root(start_path: Path, target_file: str) -> Path:
     """Recursively search for the project root directory containing the target file starting from the given path."""

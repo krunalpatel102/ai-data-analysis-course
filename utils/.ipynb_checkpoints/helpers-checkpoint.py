@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+import pandas as pd
+import shutil
 
 def get_overview(start_dir='.'):
     def find_environment_yml(start_dir):
@@ -145,3 +147,40 @@ def print_search_results(matches):
             indent = ' ' * 4 * indent_level  # Indentation level
             relative_item_path = relative_item.as_posix().replace(home_dir, '~')
             print(f"{indent}{relative_item_path}/" if item.is_dir() else f"{indent}{relative_item_path}")
+
+def switch_readme_files(repository_path):
+    """
+    Switches the README.md file in the given repository path with the markdown file located
+    at 'utils/README.md' within the same repository.
+    
+    Parameters:
+    - repository_path (str): The path to the repository containing the README.md file.
+    
+    Returns:
+    None
+    """
+    readme_path = os.path.join(repository_path, "README.md")
+    new_readme_path = os.path.join(repository_path, "utils", "README.md")
+    temp_readme_path = os.path.join(repository_path, "utils", "TEMP_README.md")
+
+    # Check if the new README.md file exists in the utils directory
+    if not os.path.exists(new_readme_path):
+        print(f"The file {new_readme_path} does not exist.")
+        return
+
+    # Temporarily move the new README.md to a temp file to avoid conflicts
+    shutil.move(new_readme_path, temp_readme_path)
+    
+    # Move the original README.md to the utils directory
+    shutil.move(readme_path, new_readme_path)
+    
+    # Move the temp README.md to the repository root
+    shutil.move(temp_readme_path, readme_path)
+
+    print("Learning insights now in README. You are ready to upload your cloned repo to GitHub!")
+
+# Example usage:
+# switch_readme_files('path/to/your/repository')
+
+
+
